@@ -14,6 +14,12 @@ def predicted(X,theta):
 def cost(X,y,theta):
      return ((1/2)*np.sum(np.square((predicted(X,theta))-y)))
 
+def cost_L1(X,y,theta,lambda_):
+    return  (((1/2)*np.sum(np.square((predicted(X,theta))-y)))+(lambda_*(np.sum(np.absolute(theta)))))
+
+def cost_L2(X,y,theta,lambda_):
+    return  (((1/2)*np.sum(np.square((predicted(X,theta))-y)))+(lambda_*(np.sum(np.square(theta)))))
+
 def r_squared(X,y,final_weights):
 
     return ((np.sum(np.square(predicted(X,final_weights)-y.mean())))/(np.sum(np.square(y-y.mean()))))
@@ -40,7 +46,7 @@ def gradient_descent_with_L2_regularisation(X,y,theta,learning_rate,iterations,l
     for i in range(iterations):
         
         theta = theta - (learning_rate) * ((1/len(X))*(np.sum(X * ((predicted(X,theta)) - y), axis=0)) +  lambda_*theta)
-        cost_history[i] = cost(X, y, theta)
+        cost_history[i] = cost_L1(X, y, theta,lambda_)
         
     return theta,cost_history
 
@@ -60,7 +66,7 @@ def gradient_descent_with_L1_regularisation(X,y,theta,learning_rate,iterations,l
 
         theta = theta - (learning_rate) * ((1/len(X))*(np.sum(X * ((predicted(X,theta)) - y), axis=0)) +  lambda_*temp)
         
-        cost_history[i] = cost(X, y, theta)
+        cost_history[i] = cost_L1(X, y, theta,lambda_)
         
         
     return theta,cost_history
