@@ -52,7 +52,7 @@ R Squared, RMSE and Squared-error was computed for each model.
 ![Squared Error](https://github.com/prathmachowksey/PolynomialRegression/blob/master/squared_error.png)
 
 
-It follows from that up till degree 3, the testing error drops with increasing degree, but increasing degree there after results in an increase in error. This suggests that the degree 3 model best fits the data, where as models of degree 4, 5 and 6 are overfitting the data. The increasing average absolute values of weights with increasing degree also suggests that the weights are assuming arbitrarily large values to fit the data. 
+It follows that up till degree 3, the testing error drops with increasing degree, but increasing degree there after results in an increase in error. This suggests that the degree 3 model best fits the data, where as models of degree 4, 5 and 6 are overfitting the data. The increasing average absolute values of weights with increasing degree also suggests that the weights are assuming arbitrarily large values to fit the data. 
 
 ## Regularisation
 To address the problem of overfitting, L1 and L2 regularisation has been implemented for the degree 6 model. 
