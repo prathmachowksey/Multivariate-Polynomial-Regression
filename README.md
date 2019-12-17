@@ -34,10 +34,10 @@ For each model, the training error was plotted for each iteration. It is clear t
 
 
 ## R Squared, RMSE and Squared-error
-R Squared, RMSE and Squared-error was computed for each model.
+R Squared and RMSE was computed for each model.
 ![R squared](https://github.com/prathmachowksey/PolynomialRegression/blob/master/r2.png)
 ![RMSE](https://github.com/prathmachowksey/PolynomialRegression/blob/master/rmse.png)
-![Squared Error](https://github.com/prathmachowksey/PolynomialRegression/blob/master/squared_error.png)
+
 
 
 It follows that up till degree 3, the testing error drops with increasing degree, but increasing degree there after results in an increase in error. This suggests that the degree 3 model best fits the data, where as models of degree 4, 5 and 6 are overfitting the data. The increasing average absolute values of weights with increasing degree also suggests that the weights are assuming arbitrarily large values to fit the data. 
