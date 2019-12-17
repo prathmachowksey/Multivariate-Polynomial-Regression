@@ -24,7 +24,8 @@ The code is divided into two files, generate_polynomials.py and polynomial_regre
 The generate_polynomials.py file will calculate the terms <a href="https://www.codecogs.com/eqnedit.php?latex=x1,x2,&space;(x1)^2,(x2)^2,&space;(x1x2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x1,x2,&space;(x1)^2,(x2)^2,&space;(x1x2)" title="x1,x2, (x1)^2,(x2)^2, (x1x2)" /></a>
 
 - **polynomial_regression.py** implements gradient descent for the 6 models which minimises the loss function:
-<a href="https://www.codecogs.com/eqnedit.php?latex=E=&space;(1/(2*N))\sum_{i=0}^{N}&space;((w0&plus;&space;w1x1&space;&plus;&space;w2x2&plus;...)&space;-&space;Y)2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E=&space;(1/(2*N))\sum_{i=0}^{N}&space;((w0&plus;&space;w1x1&space;&plus;&space;w2x2&plus;...)&space;-&space;Y)2" title="E= (1/(2*N))\sum_{i=0}^{N} ((w0+ w1x1 + w2x2+...) - Y)2" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=E=&space;(1/(2*N))\sum_{i=0}^{N}&space;((w0&plus;&space;w1x1&space;&plus;&space;w2x2&plus;...)&space;-&space;Y)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E=&space;(1/(2*N))\sum_{i=0}^{N}&space;((w0&plus;&space;w1x1&space;&plus;&space;w2x2&plus;...)&space;-&space;Y)^2" title="E= (1/(2*N))\sum_{i=0}^{N} ((w0+ w1x1 + w2x2+...) - Y)^2" /></a>
 
 ## Gradient Descent
 
@@ -54,5 +55,6 @@ Regularisation results in a sharp decrease in testing error. In fact, the loss f
 
 Average absolute weight decreases sharply for the models with regularisation. Once regularised, the ws aren’t assuming large values to cause the model to oscillate wildly and overfit the data.
 
-
+## Instructions for executing:
+Run ```python polynomial_regression.py``` to build models for degrees 1 through 6,generate comparative graphs for R Squared, RMSE and Sqaured Error, using gradient descent with and without regularisation.
 
