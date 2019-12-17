@@ -28,22 +28,10 @@ The generate_polynomials.py file will calculate the terms <a href="https://www.c
 
 ## Gradient Descent
 
-For each model, the training error was plotted for each iteration. It is clear that the error drops with each iteration.
+For each model, the training error was plotted for each iteration. It is clear that the error drops with each iteration. The following figure shows the plot of training error for degree 3 model
 
-![Degree 1](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree1.png)
-![Degree 2](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree2.png)
 ![Degree 3](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree3.png)
-![Degree 4](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree4.png)
-![Degree 5](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree5.png)
-![Degree 6](https://github.com/prathmachowksey/PolynomialRegression/blob/master/degree6.png)
 
-## Weights
-- **Degree 1**: [[ 0.0008474   0.14801694 -0.18871601]]
-- **Degree 2**: [[ 0.03157033  0.0775256  -0.19877619 -0.19828451  0.05957294  0.02007437]]
-- **Degree 3**: [[ 0.08248104  0.51152869  0.41139112 -0.30962312  0.17873276  0.15951618 -0.31064813  0.3150611   0.09436801 -0.47442793]]
-- **Degree 4**: [[ 0.47924356  0.58657799  0.41574957  0.52657949  0.61331611  0.79393905 -0.38072313  0.27884217  0.2671658  -0.43045771 -0.30201867  0.10212909 0.07436221 -0.21015514 -0.2768269 ]]
-- **Degree 5**: [[ 0.31382851  0.79733443  0.75026668  0.57068641  0.70325388  0.71379482 0.47677718  0.63452489  0.60056857  0.45961866 -0.46276197  0.2602479 0.34386478  0.23206689 -0.07004007 -0.40473914  0.22374914  0.31735775 0.20617249 -0.17940602 -0.67609412]]
-- **Degree 6**: [[ 1.43977854  0.81951983  0.79585613  0.86821295  0.8463592   0.89232315 0.58948364  0.73565259  0.74552704  0.59543297  0.65870285  0.72175616 0.72747802  0.63675393  0.61011985 -0.25639376  0.45795429  0.59324287 0.50279404  0.30888324 -0.23218663 -0.36138637  0.19801793  0.40046766 0.35676482  0.16060651 -0.296614   -0.76976689]]
 
 ## R Squared, RMSE and Squared-error
 R Squared, RMSE and Squared-error was computed for each model.
@@ -56,5 +44,13 @@ It follows that up till degree 3, the testing error drops with increasing degree
 
 ## Regularisation
 To address the problem of overfitting, L1 and L2 regularisation has been implemented for the degree 6 model. 
+The following figures show the effect of regularisation on testing error.
+
+1. RMSE 
+![RMSE](https://github.com/prathmachowksey/multivariate-polynomial-regression/blob/master/rmse_degree_6_regularisation.png)
+
+2. Average absolute weight (coefficients)
+![Avg Absolute Weight](https://github.com/prathmachowksey/multivariate-polynomial-regression/blob/master/average_weight_degree_6_regularisation.png)
+
 
 
