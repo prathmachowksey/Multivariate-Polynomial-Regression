@@ -46,11 +46,13 @@ It follows that up till degree 3, the testing error drops with increasing degree
 To address the problem of overfitting, L1 and L2 regularisation has been implemented for the degree 6 model. 
 The following figures show the effect of regularisation on testing error.
 
-1. RMSE 
 ![RMSE](https://github.com/prathmachowksey/multivariate-polynomial-regression/blob/master/rmse_degree_6_regularisation.png)
 
-2. Average absolute weight (coefficients)
+Regularisation results in a sharp decrease in testing error. In fact, the loss for degree 6 polynomial model with regularisation is comparable with the loss for  degree 1,2,3 and 4 polynomial models without regularisation.
+
 ![Avg Absolute Weight](https://github.com/prathmachowksey/multivariate-polynomial-regression/blob/master/average_weight_degree_6_regularisation.png)
+
+Average absolute weight decreases sharply for the models with regularisation. Once regularised, the ws aren’t assuming large values to cause the model to oscillate wildly and overfit the data.
 
 
 
